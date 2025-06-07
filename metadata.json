@@ -1,0 +1,8 @@
+{
+  "name": "eCornell Custom Error Explanation with guides filtering, tooltip config and all open files as context",
+  "type": "helper",
+  "properties": {
+    "user_type": "all", 
+    "component": "all"
+  }
+}
