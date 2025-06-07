@@ -43,7 +43,7 @@ Remember to stay focused on helping students learn rather than solving their pro
   })
 
   // register(id: unique button id, name: name of button visible in Coach, function: function to call when button is clicked) 
-  codioIDE.coachBot.register("eCornellErrorAugmentButton", "Explain this error!", onButtonPress)
+  codioIDE.coachBot.register("eCornellErrorAugmentButton", "Help explain this error:, onButtonPress)
 
   async function onButtonPress(params) {
     // Function that automatically collects all available context 
