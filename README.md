@@ -1,7 +1,8 @@
 # custom-assistant-example-error-augmentation
 With tooltip configuration, context filtering, and passing multiple student files as context.
 This assistant is designed to explain student programming error messages and provide minimal code examples.
-[Original Fork From Codio](https://github.com/codio-extensions/custom-assistant-example-error-augmentation)
+
+[Original Fork From Codio](https://github.com/codio-extensions/custom-assistant-example-error-augmentation){:target="_blank"}
 
 ## Supported Courses:
 - CIS540s: 
