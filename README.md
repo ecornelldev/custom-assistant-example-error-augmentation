@@ -2,6 +2,10 @@
 With tooltip configuration, context filtering, and passing multiple student files as context.
 This assistant is designed to explain student programming error messages and provide minimal code examples.
 
+## Supported Courses:
+- CIS540s: [Course Name/Description]
+- CIS560s: [Course Name/Description]
+
 ## Features:
 
 ### Error Explanation:
