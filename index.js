@@ -35,12 +35,12 @@ Remember to stay focused on helping students learn rather than solving their pro
     // 2. is there any error text (make sure it is not empty, which might be the case with autograder feedback)
     // 3. does the error text contain any update available messages? (so that we can ignore npm updates)
     // Once all these conditions have been met, only then we'll show the I can explain this error tooltip  
-    if ((isError) && (error.length > 0) && (!error.includes("npm notice"))) {
-      codioIDE.coachBot.showTooltip("I can help explain this error...", () => {
-        codioIDE.coachBot.open({id: "eCornellErrorAugmentButton", params: "tooltip"})
-      })
-    }
-  })
+  //   if ((isError) && (error.length > 0) && (!error.includes("npm notice"))) {
+  //     codioIDE.coachBot.showTooltip("I can help explain this error...", () => {
+  //       codioIDE.coachBot.open({id: "eCornellErrorAugmentButton", params: "tooltip"})
+  //     })
+  //   }
+  // })
 
   // register(id: unique button id, name: name of button visible in Coach, function: function to call when button is clicked) 
   codioIDE.coachBot.register("eCornellErrorAugmentButton", "Help explain this error:", onButtonPress)
