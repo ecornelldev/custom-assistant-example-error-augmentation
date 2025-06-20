@@ -27,25 +27,10 @@ When providing examples:
 Remember to stay focused on helping students learn rather than solving their problems directly.`
 
 
-  codioIDE.onErrorState(async (isError, error) => {
-    console.log('codioIDE.onErrorState', {isError, error})
-
-    // This statement checks for the following:
-    // 1. is there errorState true 
-    // 2. is there any error text (make sure it is not empty, which might be the case with autograder feedback)
-    // 3. does the error text contain any update available messages? (so that we can ignore npm updates)
-    // Once all these conditions have been met, only then we'll show the I can explain this error tooltip  
-  //   if ((isError) && (error.length > 0) && (!error.includes("npm notice"))) {
-  //     codioIDE.coachBot.showTooltip("I can help explain this error...", () => {
-  //       codioIDE.coachBot.open({id: "eCornellErrorAugmentButton", params: "tooltip"})
-  //     })
-  //   }
-  // })
-
   // register(id: unique button id, name: name of button visible in Coach, function: function to call when button is clicked) 
   codioIDE.coachBot.register("eCornellErrorAugmentButton", "Help explain this error:", onButtonPress)
 
-  async function onButtonPress(params) {
+  async function onButtonPress() {
     // Function that automatically collects all available context 
     // returns the following object: {guidesPage, assignmentData, files, error}
 
@@ -70,11 +55,6 @@ Remember to stay focused on helping students learn rather than solving their pro
 
     let input
 
-    if (params == "tooltip") { 
-      input = context.error.text
-      codioIDE.coachBot.write(context.error.text, codioIDE.coachBot.MESSAGE_ROLES.USER)
-    } else {
-
       try {
         input = await codioIDE.coachBot.input("Please paste the error message you want me to explain!")
       }  catch (e) {
@@ -84,7 +64,7 @@ Remember to stay focused on helping students learn rather than solving their pro
             return
           }
       }
-    }
+    
     
     // console.log(input)
 
